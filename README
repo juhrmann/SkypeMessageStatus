@@ -1,0 +1,21 @@
+Skype Message Status
+====================
+
+Skype Message Status indicates unsent Skype(tm) messages in the
+system tray.
+Unsent messages are those not acknowledged by the chat partner.
+
+State
+-----
+
+Successfully tested on Ubuntu 8.04LTS.
+
+
+
+Requirements
+------------
+
+  - Linux
+  - Skype
+  - Qt4
+
