@@ -36,6 +36,7 @@ SkypeTrayIcon::SkypeTrayIcon()
 
 	trayIcon.hide();
 	changeState(SKYPE_NOT_CONNECTED);
+	trayIcon.show();
 	new ClientAdaptor(this);
 
 	if (!QDBusConnection::sessionBus().registerObject("/com/Skype/Client", this))
@@ -158,7 +159,7 @@ void SkypeTrayIcon::changeState(enum skype_msg_state state)
 	static QIcon red("red.xpm");
 	static QIcon green("green.xpm");
 
-	trayIcon.hide();
+	//trayIcon.hide();
 
 	switch (state)
 	{
@@ -185,7 +186,7 @@ void SkypeTrayIcon::changeState(enum skype_msg_state state)
 			trayIcon.setToolTip("There are no unsent messages!");
 			break;
 	}
-	trayIcon.show();
+	//trayIcon.show();
 }
 
 void SkypeTrayIcon::updateState()
